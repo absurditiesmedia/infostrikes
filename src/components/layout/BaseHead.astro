@@ -32,6 +32,8 @@ const { title, description, ogImage } = Astro.props;
   <meta name='title' content={`Brutal Theme | ${title}`} />
   <meta name='description' content={description} />
 
+
+
   <meta property='og:type' content='website' />
   <meta property='og:url' content={canonicalURL} />
   <meta property='og:title' content={title} />
@@ -47,9 +49,13 @@ const { title, description, ogImage } = Astro.props;
   <link rel='canonical' href={canonicalURL} />
   <link rel='icon' type='image/svg' href='/favicon.svg' />
 
-  <title>Brutal Theme | {title}</title>
+  <title>infoSTRIKES! | {title}</title>
 
   <ViewTransitions />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Creepster&family=Kode+Mono:wght@400..700&family=Rubik+Distressed&family=Share+Tech+Mono&family=VT323&family=Teko:wght@300..700&family=Jacquard+12+Charted&family=Jacquarda+Bastarda+9+Charted&family=Black+Ops+One&family=Jersey+10&Bangers&family=Luckiest+Guy&family=Jacquard+24&family=Tiny5&family=Libre+Barcode+39&family=Special+Elite&family=Micro+5+Charted&family=Silkscreen:wght@400;700&family=Six+Caps&family=Protest+Guerrilla&family=Orbitron:wght@400..900&family=Libre+Barcode+128+Text&family=Bebas+Neue&family=Permanent+Marker&display=swap" rel="stylesheet">
 
   <slot />
 </head>

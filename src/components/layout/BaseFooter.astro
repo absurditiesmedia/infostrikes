@@ -1,10 +1,25 @@
 ---
 export interface Props {
   backToTop?: boolean;
+  color?: string | undefined;
 }
 
-const { backToTop = false } = Astro.props;
+
+import colors2 from '../../config/colors.json';
+
+if (Astro.props.color === undefined) {
+  Astro.props.color =
+    colors2[Math.floor(Math.random() * colors2.length)];
+}
+const { backToTop = false, color } = Astro.props;
+
 ---
+<style define:vars={{ color: color }} >
+  .footer-color {
+    background-color: var(--color);
+  
+  }
+  </style>
 
 {
   backToTop && (
@@ -33,13 +48,13 @@ const { backToTop = false } = Astro.props;
   )
 }
 
-<footer class='bg-black text-white p-6'>
+<footer class='footer-color silkscreen-regular p-6'>
   <h2 class='hidden'>Footer</h2>
   <p class='outfit'>
-    Brutal theme for Astro - by <a
-      href='https://www.elian.codes/'
+    &copy; 2024 info<a
+      href='https://infostrikes.com/'
       target='_blank'
-      class='text-blue'>ElianCodes</a
+      class='text-pink'>STRIKES!</a
     >
   </p>
 </footer>

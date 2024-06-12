@@ -2,48 +2,66 @@
 import Layout from '@layouts/Default.astro';
 import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
 import MobileSocials from '@components/home/MobileSocials.astro';
-import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
+import Pill  from '@components/generic/Pill.astro';
+import Button from '@components/generic/Button.astro';
+import Card from '@components/generic/Card.astro';
 
 const builtWith = [
-  { name: 'Astro', url: 'https://astro.build/' },
-  { name: 'UnoCSS', url: 'https://uno.antfu.me/' },
+  { name: 'Freedom', url: 'https://astro.build/' },
+  { name: 'Drugs', url: 'https://uno.antfu.me/' },
   {
-    name: 'Content Collections',
+    name: 'Cryptocurrency',
     url: 'https://docs.astro.build/en/guides/content-collections/',
   },
   { name: 'RSS', url: 'https://docs.astro.build/en/guides/rss/' },
   {
-    name: 'Sitemap',
+    name: 'Truth',
     url: 'https://docs.astro.build/en/guides/integrations-guide/sitemap/',
   },
-  { name: 'Vercel', url: 'https://vercel.com' },
-  { name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+  { name: 'Resistence', url: 'https://vercel.com' },
+  { name: 'Courage', url: 'https://www.typescriptlang.org/' },
 ];
+
+interface Props {
+  color?: string | undefined;
+}
+import colors from '../config/colors.json';
+
+if (Astro.props.color === undefined) {
+  Astro.props.color =
+    colors[Math.floor(Math.random() * colors.length)];
+}
+
+const { color } = Astro.props;
 ---
 
 <Layout
   title='Home'
-  pageTitle='Brutal Theme | Home'
-  description='Brutal is a minimalistic, neobrutalism theme for Astro.'
+  pageTitle='infoSTRIKES! | Home'
+  description='All the news the deep state hides in their hidden tunnels underground.'
 >
-  <main class='bg-pink p-6'>
+<style define:vars={{ color: color }} >
+.home-color {
+  background-color: var(--color);
+
+}
+</style>
+  <main class='p-6 home-color'>
     <MobileSocials />
     <section id='about' class='grid md:grid-cols-8 gap-8 mt-4'>
       <h2 class='hidden'>About Brutal</h2>
       <div class='col-span-4'>
         <Card>
           <div class='flex flex-col justify-between items-start gap-4'>
-            <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-              Brutal theme for <a
+            <p class='black-ops-one mt-4  text-2xl md:text-5xl lg:text-7xl'>
+              info <a
                 class='text-white'
                 target='_blank'
-                href='https://astro.build/'>Astro</a
+                href='https://astro.build/'>STRIKES!</a
               >
             </p>
-            <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-              A minimalistic, neobrutalism theme for Astro.
+            <p class='mt-2 teko text-xl md:text-3xl lg:text-5xl'>
+              All the news the deep state hides in their hidden tunnels underground.
             </p>
             <Button target={'_self'} href='/blog/'>
               Check out the blog &rarr;
@@ -53,8 +71,8 @@ const builtWith = [
       </div>
       <div class='col-span-2'>
         <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
-            Brutal is built with
+          <h2 class='text-1xl md:text-2xl lg:text-5xl mb-8 share-tech-mono'>
+           infoSTRIKES! is built with
           </h2>
           <ul class='flex gap-4 flex-wrap'>
             {
@@ -78,14 +96,11 @@ const builtWith = [
       </div>
       <div class='col-span-2'>
         <Card>
-          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
+          <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 rubik-distressed'>
+            Who let you in here?
           </h2>
-          <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
+          <p class='kode-mono'>
+            We did... because you're ready take a stand and share the truth that will free you from the neoliberal plans to enslave you!
           </p>
         </Card>
       </div>

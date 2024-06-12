@@ -119,3 +119,114 @@ html {
 {
   background-color: aliceblue;
 }
+
+.kode-mono {
+  font-family: "Kode Mono", monospace;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.rubik-distressed {
+  font-family: "Rubik Distressed", system-ui;
+  font-style: normal;
+}
+.share-tech-mono {
+  font-family: "Share Tech Mono", monospace;
+  font-style: normal;
+}
+.vt323 {
+  font-family: "VT323", monospace;
+  font-style: normal;
+}
+.tiny5 {
+  font-family: "Tiny5", sans-serif;
+  font-style: normal;
+}
+.teko {
+  font-family: "Teko", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.permanent-marker {
+  font-family: "Permanent Marker", cursive;
+  font-style: normal;
+}
+.bebas-neue{
+  font-family: "Bebas Neue", sans-serif;
+  font-style: normal;
+}
+.libre-barcode-128-text{
+  font-family: "Libre Barcode 128 Text", system-ui;
+  font-style: normal;
+}
+.orbitron {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+}
+.creepster {
+  font-family: "Creepster", system-ui;
+  font-style: normal;
+}
+.jacquarda-bastarda-9-charted {
+  font-family: "Jacquarda Bastarda 9 Charted", serif;
+  font-style: normal;
+}
+.jacquard-12-charted {
+  font-family: "Jacquard 12 Charted", system-ui;
+  font-style: normal;
+}
+.black-ops-one {
+  font-family: "Black Ops One", system-ui;
+  font-style: normal;
+}
+.jersey-10 {
+  font-family: "Jersey 10", sans-serif;
+  font-style: normal;
+}
+.luckiest-guy {
+  font-family: "Luckiest Guy", cursive;
+  font-style: normal;
+}
+.bangers {
+  font-family: "Bangers", system-ui;
+  font-style: normal;
+}
+.jacquard-24 {
+  font-family: "Jacquard 24", system-ui;
+  font-style: normal;
+}
+.silkscreen {
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+}
+.silkscreen {
+  font-family: "Silkscreen", sans-serif;
+  font-style: normal;
+}
+.libre-barcode-39 {
+  font-family: "Libre Barcode 39", system-ui;
+  font-style: normal;
+}
+.special-elite {
+  font-family: "Special Elite", system-ui;
+  font-style: normal;
+}
+.micro-5-charted {
+  font-family: "Micro 5 Charted", sans-serif;
+  font-style: normal;
+}
+.protest-guerrilla {
+  font-family: "Protest Guerrilla", sans-serif;
+  font-style: normal;
+}
+
+
+.weight-100, .fw-ext-light {font-weight:100;}
+.weight-200, .fw-light {font-weight:200;}
+.weight-300, .fw-med-light {font-weight:300;}
+.weight-400, .fw-regular {font-weight:400;}
+.weight-500, .fw-heavy {font-weight:500;}
+.weight-600, .fw-semi-bold {font-weight:600;}
+.weight-700, .fw-bold {font-weight:700;}
+.weight-800, .fw-ext-bold {font-weight:800;}
+.weight-900, .fw-ult-bold {font-weight:900;}

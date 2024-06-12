@@ -1,6 +1,7 @@
 ---
 interface Props {
   pageTitle?: string;
+  color?: string | undefined;
 }
 
 const navigationItems = [
@@ -22,13 +23,30 @@ const socialIcons = [
   { name: 'RSS', url: '/feed.xml', icon: 'i-uil-rss' },
 ];
 
-const { pageTitle } = Astro.props;
+
+import colors from '../../config/colors.json';
+
+if (Astro.props.color === undefined) {
+  Astro.props.color =
+    colors[Math.floor(Math.random() * colors.length)];
+}
+
+
+const { pageTitle, color } = Astro.props;
+
+
 ---
 
-<header class='border-b-4 border-black flex justify-between p-6 items-center'>
+<style define:vars={{ color: color }} >
+  .nav-color {
+    background-color: var(--color);
+  
+  }
+  </style>
+<header class='nav-color border-b-4 border-black flex justify-between p-6 items-center'>
   {pageTitle && <h1 class='hidden'>{pageTitle}</h1>}
   <a href='/' title='Back to Home'>
-    <p class='righteous md:text-5xl'>Brutal</p>
+    <p class='vt323 md:text-5xl'>infoSTRIKES!</p>
   </a>
   <nav class='hidden md:inline-block'>
     <h2 class='hidden'>Navigation</h2>
@@ -37,7 +55,7 @@ const { pageTitle } = Astro.props;
         navigationItems.map((item) => (
           <li>
             <a
-              class='text-lg font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out'
+              class='text-lg  tiny5 font-medium hover:text-green hover:underline transition-all duration-150 ease-in-out'
               href={item.url}
               title={`Go to ${item.name}`}
             >
