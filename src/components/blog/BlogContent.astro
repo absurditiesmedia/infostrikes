@@ -9,7 +9,7 @@ const { content } = Astro.props;
 ---
 
 <article class='prose-slate w-sm md:w-prose md:prose poppins'>
-  <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
+  <a href='/news/' title='Back to blog'>&larr; Back to news</a>
 
   <h1>{content.title}</h1>
   <p class='text-slate text-sm md:text-base'>
@@ -17,5 +17,5 @@ const { content } = Astro.props;
   </p>
   <slot />
   <p class='text-slate'>Written by {content.author}</p>
-  <a href='/blog/' title='Back to blog'>&larr; Back to blog</a>
+  <a href='/news/' title='Back to news'>&larr; Back to news</a>
 </article>
