@@ -26,7 +26,9 @@ export const GET: APIRoute = async ({ params, props }) => {
   const description = props.description ?? null;
   const html = toReactElement(`
   <div style="background-color: red; display: flex; flex-direction: column; height: 100%; padding: 1rem; width: 100%">
-      <div style="display:flex;"> <img src="https://infostrikes.com/favicon/apple-touch-icon.png" width="600px" height="600px" style="border: 3px solid black; border-radius: 0.5rem; align:left;" /><h1 style="font-size:80px;">info<p/>STRIKES!</h1></div>
+      <div style="display:flex;"> <img src="https://infostrikes.com/favicon/apple-touch-icon.png" width="600px" height="600px" style="border: 3px solid black; border-radius: 0.5rem; align:left;" /><h1 style="font-size:60px;">infoSTRIKES!:${title}</h1>
+       
+      </div>
       
       </div>
   </div>
