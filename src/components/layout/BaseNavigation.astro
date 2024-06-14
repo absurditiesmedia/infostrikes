@@ -11,13 +11,8 @@ const navigationItems = [
 
 const socialIcons = [
   {
-    name: 'GitHub',
-    url: 'https://github.com/eliancodes/brutal',
-    icon: 'i-uil-github',
-  },
-  {
     name: 'Twitter',
-    url: 'https://www.twitter.com/eliancodes',
+    url: 'https://x.com/infostrikes',
     icon: 'i-uil-twitter',
   },
   { name: 'RSS', url: '/feed.xml', icon: 'i-uil-rss' },
@@ -71,7 +66,7 @@ const { pageTitle, color } = Astro.props;
               href={item.url}
               class='hover:text-green hover:underline transition-all duration-150 ease-in-out'
               target='_blank'
-              title={`'See @ElianCodes on ${item.name}`}
+              title={`'See @infostrikes on ${item.name}`}
             >
               <div class:list={[item.icon, 'w-6 h-6']} />
             </a>
