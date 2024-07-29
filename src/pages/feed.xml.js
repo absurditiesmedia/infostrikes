@@ -4,7 +4,7 @@ import { getCollection } from 'astro:content';
 export async function GET(context) {
   const blog = await getCollection('blog');
   return rss({
-    title: 'Brutal Blog',
+    title: 'infoSTRIKES!',
     description: 'Brutal is a theme for Astro',
     stylesheet: false,
     site: context.site,
